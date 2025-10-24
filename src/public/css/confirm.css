@@ -1,0 +1,55 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.contact-form__heading h2 {
+    font-size: 30px;
+}
+
+.confirm-table {
+    width: 972px;
+    margin: 0 auto;
+}
+
+.confirm-table tr {
+    border: solid 1px #E0DFDE;
+}
+
+.confirm-table th {
+    background: #BAA899;
+    padding: 15px 50px;
+    color: #fff;
+    width: 30%;
+    text-align: left;
+}
+
+.confirm-table td {
+    padding: 15px 40px;
+}
+
+.confirm-button {
+    width: 280px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 10px 40px;
+    border: none;
+    background: #82756A;
+    color: #fff;
+    cursor: pointer;
+}

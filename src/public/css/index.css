@@ -25,6 +25,20 @@
     margin-bottom: 15px;
 }
 
+.form__group input,
+select,
+textarea {
+    background: #F4F4F4;
+    border: none;
+    height: 38px;
+    padding: 10px;
+}
+
+.form__group input::placeholder {
+
+    color: #8B7969;
+}
+
 .form__label--item {
     font-size: 20px;
 }
@@ -32,7 +46,7 @@
 .form__label--required {
     margin-left: 5px;
     padding: 4px 6px;
-    color: #ff0000;
+    color: #FF9494;
 }
 
 .form__error {
@@ -51,14 +65,12 @@
     width: 618px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .form__name input {
-    padding: 10px;
     width: 287.15px;
     height: 38px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
     appearance: none;
 }
 
@@ -112,21 +124,20 @@
     height: 20px;
 }
 
-.form__input--text input,
-.form__input--textarea textarea {
+.form__text input,
+.form__textarea textarea {
     padding: 10px;
     width: 618px;
     height: 38px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+    border: none;
     appearance: none;
 }
 
-.form__input--text input {
+.form__text input {
     height: 40px;
 }
 
-.form__input--textarea textarea {
+.form__textarea textarea {
     height: 180px;
 }
 
@@ -135,12 +146,51 @@
 }
 
 .form__button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 50px;
+    padding: 10px 40px;
     border: none;
-    border-radius: 3px;
-    background: #000;
+    background: #82756A;
     color: #fff;
     cursor: pointer;
+}
+
+.form__select {
+    width: 618px;
+    display: flex;
+    justify-content: left;
+    position: relative;
+
+
+}
+
+.form__select select {
+    width: initial;
+    color: #BEB1A6;
+    max-width: 618px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 36px 8px 12px;
+    font-size: 16px;
+}
+
+.form__select::after {
+    content: "";
+    position: relative;
+    right: 28px;
+    top: 13px;
+    transform: translateY(-50%) rotate(0deg);
+
+    width: 20px;
+    height: 20px;
+    background: #BEB1A6;
+    /* 塗りつぶし色 */
+
+    /* 上半分を消して下半分だけ残す（ひし形の下側） */
+    -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%);
+    clip-path: polygon(0 50%, 50% 100%, 100% 50%);
+    pointer-events: none;
+}
+
+.form__group textarea::placeholder {
+    color: #8B7969;
 }

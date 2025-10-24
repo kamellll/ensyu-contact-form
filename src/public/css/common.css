@@ -27,3 +27,10 @@ body {
     font-family: "Inika", serif;
     color: #8B7969;
 }
+
+input,
+textarea,
+button,
+select {
+    font-family: "Inika", serif;
+}
