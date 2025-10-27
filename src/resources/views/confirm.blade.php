@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <th>電話番号</th>
-                <td>{{ $contact['tel'] }}</td>
+                <td>{{ $contact['tel1'] }}{{ $contact['tel2'] }}{{ $contact['tel3'] }}</td>
             </tr>
             <tr>
                 <th>住所</th>
@@ -66,8 +66,8 @@
         <div class="confirm-button">
             <form class="form" action="/thanks" method="post">
                 @csrf
-                <input class="form__last-name" type="hidden" name="last_name" value="{{ old('last_name') }}" />
-                <input class="form__first-name" type="hidden" name="first_name" value="{{ old('first_name') }}" />
+                <input class="form__last-name" type="hidden" name="last_name" value="{{ $contact['last_name'] }}" />
+                <input class="form__first-name" type="hidden" name="first_name" value="{{ $contact['first_name'] }}" />
                 <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
                 <input type="hidden" name="email" value="{{ $contact['email'] }}">
                 <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
@@ -79,19 +79,21 @@
                     <button class="form__button-submit" type="submit">送信</button>
                 </div>
             </form>
-            <form class="form" action="/" method="post">
+            <form class="form" action="/back" method="post">
                 @csrf
-                <input class="form__last-name" type="hidden" name="last_name" value="{{ old('last_name') }}" />
-                <input class="form__first-name" type="hidden" name="first_name" value="{{ old('first_name') }}" />
+                <input class="form__last-name" type="hidden" name="last_name" value="{{ $contact['last_name'] }}" />
+                <input class="form__first-name" type="hidden" name="first_name" value="{{ $contact['first_name'] }}" />
                 <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
                 <input type="hidden" name="email" value="{{ $contact['email'] }}">
-                <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
+                <input type="hidden" name="tel1" value="{{ $contact['tel1'] }}">
+                <input type="hidden" name="tel2" value="{{ $contact['tel2'] }}">
+                <input type="hidden" name="tel3" value="{{ $contact['tel3'] }}">
                 <input type="hidden" name="address" value="{{ $contact['address'] }}">
                 <input type="hidden" name="building" value="{{ $contact['building'] }}">
                 <input type="hidden" name="category_id" value="{{ $contact['category_id'] }}">
                 <input type="hidden" name="detail" value="{{ $contact['detail'] }}">
-                <div class="form__button">
-                    <button class="form__button-submit" type="submit">修正</button>
+                <div class="form__correct">
+                    <button type="submit">修正</button>
                 </div>
             </form>
         </div>

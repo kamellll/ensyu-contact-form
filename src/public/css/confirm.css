@@ -53,3 +53,16 @@
     color: #fff;
     cursor: pointer;
 }
+
+.form__correct {
+    margin-top: 30px;
+}
+
+.form__correct button {
+    padding: 10px 40px;
+    border: none;
+    color: #82756A;
+    cursor: pointer;
+    text-decoration: underline;
+    background: initial;
+}

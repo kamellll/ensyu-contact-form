@@ -1,0 +1,127 @@
+/* 親 */
+.pager {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 矢印 */
+.pager__arrow-left {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E0DFDE;
+    /* gray-300 */
+    border-radius: 8px 0px 0px 8px;
+    background: #fff;
+    color: #374151;
+    /* gray-700 */
+    text-decoration: none;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.pager__arrow-left:hover {
+    background: #f9fafb;
+    /* gray-50 */
+    color: #111827;
+    /* gray-900 */
+    border-color: #E0DFDE;
+    /* gray-400 */
+    cursor: pointer;
+}
+
+.pager__arrow-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #E0DFDE;
+    /* gray-300 */
+    border-radius: 0px 8px 8px 0px;
+    background: #fff;
+    color: #374151;
+    /* gray-700 */
+    text-decoration: none;
+    transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.pager__arrow-right:hover {
+    background: #f9fafb;
+    /* gray-50 */
+    color: #111827;
+    /* gray-900 */
+    border-color: #E0DFDE;
+    /* gray-400 */
+    cursor: pointer;
+}
+
+.pager__arrow--disabled {
+    color: #9ca3af;
+    /* gray-400 */
+    background: #fff;
+    border-color: #e5e7eb;
+    /* gray-200 */
+    cursor: default;
+}
+
+/* 矢印内のSVG */
+.pager__icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ページ番号の並び */
+.pager__numbers {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* ページ番号 */
+.pager__page {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    padding: 0 .5rem;
+    border: 1px solid #E0DFDE;
+    background: #fff;
+    color: #374151;
+    text-decoration: none;
+    transition: background .15s ease, color .15s ease, border-color .15s ease, transform .05s ease;
+}
+
+.pager__page:hover {
+    background: #f9fafb;
+    color: #111827;
+    border-color: #E0DFDE;
+}
+
+.pager__page:active {
+    transform: translateY(1px);
+}
+
+/* 現在のページ */
+.pager__page--current {
+    border-color: #8B7969;
+    /* blue-500 */
+    background: #8B7969;
+    /* blue-50 */
+    color: #fff;
+    /* blue-700 */
+    cursor: default;
+    font-weight: 600;
+}
+
+/* 省略記号 */
+.pager__page--ellipsis {
+    min-width: auto;
+    padding: 0 .25rem;
+    border-color: transparent;
+    background: transparent;
+    color: #6b7280;
+    /* gray-500 */
+}

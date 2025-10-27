@@ -1,0 +1,45 @@
+.thankyou {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 背景の薄い Thank you */
+.thankyou__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.05);
+    /* 薄い透かし */
+    white-space: nowrap;
+    pointer-events: none;
+    /* クリックを透過 */
+    user-select: none;
+}
+
+/* 中央の本文とリンク */
+.thankyou__content {
+    position: relative;
+    z-index: 2;
+}
+
+.thankyou__content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #8B7969;
+}
+
+.thankyou__link {
+    display: inline-block;
+    padding: 0.6em 1.8em;
+    background: #8B7969;
+    color: #fff;
+    text-decoration: none;
+}

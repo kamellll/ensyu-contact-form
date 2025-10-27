@@ -1,0 +1,65 @@
+.header {
+    background: #fff;
+    border-bottom: solid 1px #E0DFDE;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    text-align: center;
+    position: relative;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    color: #8B7969;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    font-weight: 400;
+}
+
+.header__button {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    padding: 8px 20px;
+    background: #f6f6f6;
+    color: #D9C6B5;
+    border: solid 1px #D9C6B5;
+    text-decoration: none;
+}
+
+.header__logout {
+    display: inline-block;
+    position: absolute;
+    padding: initial;
+    width: inherit;
+    right: 20px;
+    top: 30%;
+}
+
+.header__logout button {
+    padding: 8px 20px;
+    background: #f6f6f6;
+    color: #D9C6B5;
+    border: solid 1px #D9C6B5;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Inika", serif;
+    color: #8B7969;
+}
+
+input,
+textarea,
+button,
+select {
+    font-family: "Inika", serif;
+}

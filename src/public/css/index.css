@@ -158,8 +158,6 @@ textarea {
     display: flex;
     justify-content: left;
     position: relative;
-
-
 }
 
 .form__select select {

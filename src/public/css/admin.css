@@ -1,0 +1,123 @@
+body {
+    background: #fff;
+}
+
+.admin {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.admin__heading {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.search input,
+select,
+button {
+    margin-right: 38px;
+    height: 40px;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form__item {
+    display: flex;
+}
+
+.search-form__text {
+    width: 300px;
+}
+
+.search-form__item-select {
+    width: 181px;
+}
+
+.search-form__button-submit {
+    background: #82756a;
+    border: none;
+    color: #fff;
+    width: 80px;
+}
+
+.reset__button button {
+    margin: 0;
+    border: none;
+    background: #d9c6b5;
+    color: #fff;
+    width: 80px;
+}
+
+.form__error {
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__button {
+    margin-top: 20px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 46px;
+    border: none;
+    background: #82766a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.page {
+    width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.export__button button {
+    margin: 0;
+    border: none;
+    background: #edeae6;
+    color: #8B7969;
+}
+
+.admin-table {
+    width: 1000px;
+    margin: 10px auto;
+    border: solid 1px #E0DFDE;
+}
+
+.admin-table th {
+    background: #8b7969;
+    color: #fff;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.admin-table tr {
+    height: 40px;
+    border-bottom: solid 1px #E0DFDE;
+}
+
+.admin-table td {
+    padding-left: 20px;
+}
