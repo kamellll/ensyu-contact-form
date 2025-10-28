@@ -21,6 +21,9 @@ Dockerビルド
 ・Laravel 8.83.29
 ・MySQL8.0.26
 
+## ER図
+![ER図（contacts×categories）](docs/images/er.png)
+
 ##URL
 ・開発環境：http://localhost:8008/
 ・phpMyAdmin：http://localhost:8080/

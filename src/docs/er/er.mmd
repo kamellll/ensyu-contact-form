@@ -1,0 +1,31 @@
+erDiagram
+    categories ||--o{ contacts: ""
+
+    categories {
+      int      id PK
+      string   name
+      timestamp created_at
+      timestamp updated_at
+    }
+
+    contacts {
+      bigint   id PK "BIGINT UNSIGNED"
+      bigint   category_id FK "BIGINT UNSIGNED"
+      varchar(255)   first_name
+      varchar(255)   last_name
+      varchar(255)   email
+      varchar(255)   tel
+      varchar(255)   gender
+      varchar(255)   address
+      varchar(255)   building
+      text     detail
+      timestamp created_at
+      timestamp updated_at
+    }
+
+    users {
+      bigint       id PK "BIGINT UNSIGNED"
+      varchar(255) content
+      timestamp    created_at
+      timestamp    updated_at
+    }
