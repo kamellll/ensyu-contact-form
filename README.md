@@ -22,7 +22,7 @@ Dockerビルド
 ・MySQL8.0.26
 
 ## ER図
-![ER図（contacts×categories）](docs/images/er.png)
+![ER図](src/docs/images/er.png)
 
 ##URL
 ・開発環境：http://localhost:8008/
