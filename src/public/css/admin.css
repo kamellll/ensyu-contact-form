@@ -2,6 +2,13 @@ body {
     background: #fff;
 }
 
+.admin__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
 .admin {
     margin: 0 auto;
     padding: 30px 15px;
@@ -114,10 +121,181 @@ button {
 }
 
 .admin-table tr {
-    height: 40px;
+    height: 70px;
     border-bottom: solid 1px #E0DFDE;
 }
 
 .admin-table td {
     padding-left: 20px;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .4);
+}
+
+.modal__panel {
+    position: relative;
+    margin: 5vh auto 0;
+    max-width: 720px;
+    width: calc(100% - 32px);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    outline: none;
+}
+
+.modal__header,
+.modal__footer {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal__footer {
+    border-top: 1px solid #eee;
+    border-bottom: none;
+    text-align: right;
+}
+
+.modal__body {
+    padding: 16px;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.modal__close {
+    appearance: none;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px 16px;
+}
+
+.detail dt {
+    color: #666;
+}
+
+.preserve-linebreak {
+    white-space: pre-wrap;
+}
+
+.btn-detail {
+    appearance: none;
+    border: 1px solid #e7dcd1;
+    background: #fcfcfc;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #D9C6B5;
+}
+
+.modal__form {
+    padding: 50px 30px 30px 30px;
+}
+
+.modal__content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.modal__contact {
+    width: 60%;
+    text-align: left;
+}
+
+.modal__delete-button {
+    width: 76px;
+
+    margin: 10px auto;
+}
+
+.modal__delete-button button {
+    width: 100%;
+    background: #ba370d;
+    color: #fff;
+    border: none;
+}
+
+.close-button {
+    --size: 36px;
+    /* ボタンの直径 */
+    --line: 2px;
+    /* バツ線の太さ */
+    --fg: #8B7969;
+    /* 線色 */
+    --bg: #ffffff;
+    /* 背景色（丸） */
+
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid #8B7969;
+    border-radius: 9999px;
+    /* 正円 */
+    background: var(--bg);
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    /* 内側余白なし */
+    line-height: 1;
+    color: var(--fg);
+    /* 予備 */
+    transition: background .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+/* バツ印（擬似要素2本） */
+.close-button::before,
+.close-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: calc(var(--size) * 0.45);
+    /* バツの長さ */
+    height: var(--line);
+    background: currentColor;
+    border-radius: 2px;
+    transform-origin: center;
+    pointer-events: none;
+    color: var(--fg);
+}
+
+.close-button::before {
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    transform: rotate(-45deg);
+}
+
+.close-button:active {
+    transform: translateY(1px);
+}
+
+/* キーボードフォーカス */
+.close-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 30%, transparent);
+    border-color: var(--ring);
 }

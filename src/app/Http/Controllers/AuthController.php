@@ -101,4 +101,10 @@ class AuthController extends Controller
             ->appends($request->query());//ページネーションでページを切り替えても検索条件を引き継ぐ
         return view('auth/admin', compact('contacts', 'categories', 'text', 'gender', 'category_id', 'date'));
     }
+    public function destroy(Request $request)
+    {
+        Contact::find($request->id)->delete();
+
+        return redirect('/admin')->with('message', 'お問い合わせを削除しました');
+    }
 }
