@@ -53,12 +53,10 @@
             </form>
         </div>
         <div class="page">
-            <form class="export" action="/export" method="get">
-                @csrf
-                <div class="export__button">
-                    <button type="submit">エクスポート</button>
-                </div>
-            </form>
+            <div class="export__button">
+                @php $qs = http_build_query(request()->except('_token', 'page')); @endphp
+                <a class="btn" href="{{ url('/export') }}@if($qs)?{{ $qs }}@endif">エクスポート</a>
+            </div>
             <div class="page__content">{{ $contacts->links('vendor.pagination.arrows-numbers') }}</div>
         </div>
         <table class="admin-table">

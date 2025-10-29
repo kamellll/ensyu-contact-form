@@ -98,13 +98,17 @@ button {
     margin: 20px auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.export__button button {
+.export__button a {
     margin: 0;
     border: none;
     background: #edeae6;
     color: #8B7969;
+    text-decoration: none;
+    height: 36px;
+    padding: 5px 20px;
 }
 
 .admin-table {
